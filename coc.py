@@ -139,3 +139,9 @@ for i, digit_char in enumerate(_str):
     cumulative_sum += digit ** i
     print(cumulative_sum)
 
+
+"""
+ calculer le nombre de rangées dans une mosquée,
+ en fonction de la longueur de la mosquée (l) et de la distance entre les rangées (d)
+ """
+print((int(input())*100)//int(input()))
