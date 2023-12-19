@@ -122,3 +122,20 @@ except:
     result =0
 
 print(result)
+
+
+"""
+vous recevez une chaîne de chiffres. 
+Pour chaque chiffre (en commençant par le plus à gauche), 
+vous devez calculer ce chiffre élevé à la puissance de son indice, 
+puis afficher la somme cumulative jusqu'à présent. 
+"""
+_str = input()
+
+cumulative_sum = 0
+
+for i, digit_char in enumerate(_str):
+    digit = int(digit_char)
+    cumulative_sum += digit ** i
+    print(cumulative_sum)
+
