@@ -24,3 +24,15 @@ mots = s.split()
 # Appliquer les modifications à chaque mot
 resultat = ' '.join([mot.capitalize() for mot in mots])
 print(resultat)
+
+""" Calculer l'air d'un trapeze"""
+
+a = int(input())
+b = int(input())
+h = int(input())
+
+# Calculer l'aire du trapèze
+aire_trapeze = 0.5 * (a + b) * h
+
+# Afficher l'aire avec une décimale
+print(format(aire_trapeze, ".1f"))
