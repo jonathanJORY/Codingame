@@ -64,3 +64,28 @@ for i in range(s, e+1):
         cat4+=1
 
 print(cat1,cat2,cat3,cat4)
+
+"""
+votre adversaire peut attaquer de trois côtés (gauche, droite ou en haut), et il peut utiliser deux types d'attaques : 
+une attaque normale (usual) ou une attaque puissante (hard). 
+Vous devez déterminer la meilleure réponse en fonction de l'attaque et du côté de l'adversaire.
+
+Voici un résumé des règles :
+
+Si l'adversaire utilise une attaque normale (usual), vous devez vous défendre du même côté que lui.
+Si l'adversaire utilise une attaque puissante (hard), vous devez esquiver dans la direction opposée à son attaque
+"""
+
+power = input()
+side = input()
+if power == "usual":
+    print('defence')
+    print(side)
+else:
+    print('dodging')
+    if side=="above":
+        print('any')
+    elif side =="right":
+        print('left')
+    else:
+        print('right')
