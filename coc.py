@@ -145,3 +145,31 @@ for i, digit_char in enumerate(_str):
  en fonction de la longueur de la mosquée (l) et de la distance entre les rangées (d)
  """
 print((int(input())*100)//int(input()))
+
+
+"""
+ calculer le pourcentage (arrondi à l'entier supérieur)
+ qu'un ensemble de caractères spécifiés représente dans une chaîne donnée (en ignorant la casse).
+"""
+import math
+# Lire la chaîne et le nombre de caractères spécifiés
+s = input()
+n = int(input())
+# Initialiser un dictionnaire pour stocker le nombre d'occurrences de chaque caractère
+occurrences = {}
+# Compter le nombre d'occurrences de chaque caractère (en ignorant la casse)
+for char in s.lower():
+    occurrences[char] = occurrences.get(char, 0) + 1
+# Parcourir les caractères spécifiés
+for _ in range(n):
+    # Lire le caractère spécifié
+    specified_char = input().lower()
+    # Obtenir le nombre d'occurrences de ce caractère dans la chaîne
+    char_count = occurrences.get(specified_char, 0)
+    # Calculer le pourcentage (arrondi à l'entier supérieur)
+    try:
+        percentage = math.ceil((char_count / len(s)) * 100)
+    # Afficher le résultat
+        print(f"{percentage}%")
+    except:
+        print("0%")
