@@ -99,3 +99,26 @@ a, b = [int(i) for i in input().split()]
 # To debug: print("Debug messages...", file=sys.stderr, flush=True)
 
 print(180 - a - b)
+
+"""
+produire un entier en concaténant les chiffres du milieu des entiers fournis
+"""
+
+n = int(input())
+numbers=[]
+for i in input().split():
+    numbers.append(i)
+
+middle_digits = []
+
+# Parcourir chaque entier
+for integer in numbers:
+    stripped_integer = str(int(integer))
+
+    middle_digits.append(stripped_integer[1:-1])
+try:
+    result = int("".join(middle_digits))
+except:
+    result =0
+
+print(result)
