@@ -36,3 +36,31 @@ aire_trapeze = 0.5 * (a + b) * h
 
 # Afficher l'aire avec une décimale
 print(format(aire_trapeze, ".1f"))
+
+"""
+prend a et b et une plage s et e retourner le nombre de chiffres dans les categorie suivante:
+
+Multiples de a, mais pas de b
+Multiples de b, mais pas de a
+Multiples à la fois de a et b
+Aucun des cas ci-dessus
+"""
+
+a, b = [int(i) for i in input().split()]
+s, e = [int(i) for i in input().split()]
+
+cat1 = 0
+cat2 = 0
+cat3 = 0
+cat4 = 0
+for i in range(s, e+1):
+    if i%a ==0 and i%b!=0:
+        cat1+=1
+    elif i%b ==0 and i%a!=0:
+        cat2+=1
+    if i%a ==0 and i%b==0:
+        cat3+=1
+    if i%a !=0 and i%b!=0:
+        cat4+=1
+
+print(cat1,cat2,cat3,cat4)
