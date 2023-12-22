@@ -1,0 +1,1 @@
+<?php fscanf(STDIN,"%d%d%d%d",$lx,$ly,$tx,$ty);while(fscanf(STDIN,"%d",$remainingTurns)){echo($ty>$ly?"N":($ty<$ly?"S":"")).($tx>$lx?"W":($tx<$lx?"E":""))."\n";$tx+=$lx>$tx?1:($lx<$tx?-1:0);$ty+=$ly>$ty?1:($ly<$ty?-1:0);}?>

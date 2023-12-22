@@ -1,0 +1,13 @@
+Imports System
+
+Module Player
+    Sub Main()
+        Dim i() = Console.ReadLine().Split(" "), x = i(0), y = i(1), t = i(2), u = i(3)
+
+        While True
+            Dim r = Integer.Parse(Console.ReadLine()), dx = Math.Sign(x - t), dy = Math.Sign(y - u)
+            t += dx : u += dy
+            Console.WriteLine(If(dy > 0, "S", If(dy < 0, "N", "")) + If(dx > 0, "E", If(dx < 0, "W", "")))
+        End While
+    End Sub
+End Module

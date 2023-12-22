@@ -1,0 +1,1 @@
+let[a,b,c,d]=readline().split(' ').map(Number);const Y=r=>r?r<0?(d--,'N'):(d++,'S'):'';const X=r=>r?r<0?(c--,'W'):(c++,'E'):'';while(1){const r=parseInt(readline()),y=Y(b-d),x=X(a-c);console.log(`${y}${x}`)}

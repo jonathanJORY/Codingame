@@ -1,0 +1,1 @@
+select(STDOUT);$|=1;my($lx,$ly,$tx,$ty)=split/ /,<STDIN>;while(<STDIN>){print(($ty>$ly?'N':$ty<$ly?'S':'').($tx>$lx?'W':$tx<$lx?'E':'')."\n");$tx+=($lx>$tx)-($lx<$tx);$ty+=($ly>$ty)-($ly<$ty);}
